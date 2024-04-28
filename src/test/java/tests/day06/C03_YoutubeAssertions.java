@@ -1,6 +1,5 @@
 package tests.day06;
 
-
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -50,10 +49,6 @@ public class C03_YoutubeAssertions {
         String unUxpectedTitle = "youtube";
         String actualTitle = driver.getTitle();
        Assert.assertFalse(unUxpectedTitle.equals(actualTitle));
-
-
-
-
 
        // Assert.assertNotEquals(unUxpectedTitle,actualTitle);
     }

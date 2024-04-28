@@ -31,26 +31,7 @@ public class C06_BeforeTest_AfterTest {
         driver.close();
     }
 
-    @Test
-    public void wisequarterTesti() {
 
-        // Wise quarter anasayfaya gidip
-        setup();
-
-        driver.get("https://www.wisequarter.com");
-
-        // Title'in Wise Quarter icerdigini test edin
-        String expectedTitleIcerik = "Wise Quarters";
-        String actualTitle = driver.getTitle();
-        if (actualTitle.contains(expectedTitleIcerik)) {
-            System.out.println("Wise Quarter title testi PASSED");
-        } else {
-            System.out.println("Wise Quarter title testi FAILED");
-        }
-
-        // ve sayfayi kapatin
-        driver.close();
-    }
 @Test
     public void youtubeTesti() {
         //youtube anasayfaya gidin toutube titlenin YouTube olduğunu test edin
@@ -59,7 +40,7 @@ public class C06_BeforeTest_AfterTest {
         driver.get("https://www.youtube.com");
         driver.getTitle();
 
-        // Title'in Wise Quarter icerdigini test edin
+        // Title'in youtube icerdigini test edin
         String expectedTitleIcerik = "YouTube";
         String actualTitle = driver.getTitle();
 
@@ -68,6 +49,8 @@ public class C06_BeforeTest_AfterTest {
         } else {
             System.out.println("youtube title testi FAILED");
         }
+    // sayfayi kapatin
+    driver.close();
     }
 
     public void setup() {

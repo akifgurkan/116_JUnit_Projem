@@ -20,9 +20,9 @@ public class C02_BestBuyAssertions {
     //      ○ logoTest => BestBuy logosunun görüntülendigini test edin
     //      ○ FrancaisLinkTest => Fransizca Linkin görüntülendiğini test edin
     static WebDriver driver;
+
     @BeforeClass
     public static void setup(){
-
         driver= new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -32,6 +32,7 @@ public class C02_BestBuyAssertions {
     public static void teardown(){
         driver.close();
     }
+
     @Test
     public void urlTest(){
         //      ○ Sayfa URL’inin https://www.bestbuy.com/ ‘a esit oldugunu test edin

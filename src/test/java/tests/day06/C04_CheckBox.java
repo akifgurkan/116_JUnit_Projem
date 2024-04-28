@@ -24,6 +24,7 @@ public class C04_CheckBox {
     public void teardown(){
         driver.close();
     }
+
     @Test
     public void test01() throws InterruptedException {
         //  a. Verilen web sayfasına gidin.
@@ -32,6 +33,7 @@ public class C04_CheckBox {
         //  b. Checkbox1 ve checkbox2 elementlerini locate edin.
         WebElement checkBox1 = driver.findElement(By.xpath("(//input[@type='checkbox'])[1]"));
         WebElement checkBox2 = driver.findElement(By.xpath("(//input[@type='checkbox'])[2]"));
+
         //  c. Checkbox1 seçili değilse onay kutusunu tıklayın
         Thread.sleep(3000);
         if (!checkBox1.isSelected()){

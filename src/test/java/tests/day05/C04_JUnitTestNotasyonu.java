@@ -29,7 +29,11 @@ public class C04_JUnitTestNotasyonu {
           ONGOREMEYIZ ve DUZENLEYEMEYIZ
        */
     // Bir class'da 3 farkli test olsa
-    // ve ben testleri istersem toplu, istersem bagimsiz olarak calistirabilsem
+    // ve ben testleri istersem toplu, istersem bagimsiz olarak calistirabilirim
+    // bunun icin test methodlarini ayirt etmek icin @Test notasyonu kullanilir
+    // @Test notasyonu test methodu oldugunu belirtir
+    // @Test notasyonu import edilirken org.junit.Test seklinde import edilmelidir
+    // @Test notasyonu her test methodu icin tek tek yazilmalidir
     @Test
     public void amazonTesti() {
         // amazon'a gidelim ve url'in amazon icerdigini test edip
@@ -38,7 +42,7 @@ public class C04_JUnitTestNotasyonu {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get("https://www.amazon.com");
-        String expectedUrlIcerik = "ramazon";
+        String expectedUrlIcerik = "amazon";
         String actualUrl = driver.getCurrentUrl();
         if (actualUrl.contains(expectedUrlIcerik)) {
             System.out.println("Amazon url testi PASSED");
@@ -51,19 +55,20 @@ public class C04_JUnitTestNotasyonu {
 
     @Test
     public void wisequarterTesti() {
-        // Wise quarter anasayfaya gidip
+        // https://www.linkedin.com/in/akifgurkan/ sayfaya gidip
 
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        driver.get("https://www.wisequarter.com");
-        // Title'in Wise Quarter icerdigini test edin
-        String expectedTitleIcerik = "Wise Quarters";
+        driver.get("https://www.linkedin.com/in/akifgurkan/");
+        // Title'in Akif Gürkan icerdigini test edin
+        String expectedTitleIcerik = "Akif G.";
         String actualTitle = driver.getTitle();
+        System.out.println(actualTitle);
         if (actualTitle.contains(expectedTitleIcerik)) {
-            System.out.println("Wise Quarter title testi PASSED");
+            System.out.println("Akif Gürkan title testi PASSED");
         } else {
-            System.out.println("Wise Quarter title testi FAILED");
+            System.out.println("Akif Gürkan title testi FAILED");
         }
         // ve sayfayi kapatin
         driver.close();

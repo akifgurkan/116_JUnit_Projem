@@ -1,6 +1,5 @@
 package tests.day06;
 
-
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -18,7 +17,7 @@ public class C01_Before_AfterClassNotasyonlari {
             @BeforeClass ve @AfterClass notasyonlarini kullanabiliriz
             ANCAK, ....
             bu notasyonlara sahip method'larin static olmasi gerekir
-         */
+    */
     // Amazon anasayfaya gidin
     // 3 farkli test method'u olusturup, verilen testleri yapin
     // 1- url'in amazon icerdigini test edin
@@ -29,7 +28,6 @@ public class C01_Before_AfterClassNotasyonlari {
 
     @BeforeClass
     public static void setup() {
-
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -86,5 +84,4 @@ public class C01_Before_AfterClassNotasyonlari {
         }
     }
 
-
-}//class
+}
